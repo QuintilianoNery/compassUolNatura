@@ -15,8 +15,6 @@ describe('Cadastro de usuarios', () => {
             Home.validarMenuCategorias();
             Home.validarDivPrincipalComComponentesDaPagina();
 
-
-
         });
     });
 });
