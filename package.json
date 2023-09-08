@@ -1,0 +1,30 @@
+{
+  "name": "compassuolnatura",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">compassUolNatura</h1>",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuintilianoNery/compassUolNatura.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuintilianoNery/compassUolNatura/issues"
+  },
+  "homepage": "https://github.com/QuintilianoNery/compassUolNatura#readme",
+  "dependencies": {
+    "@cypress/grep": "^4.0.0",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "^12.14.0",
+    "cypress-plugin-steps": "^1.1.1",
+    "faker-br": "^0.4.1",
+    "leite": "^0.2.0"
+  }
+}
