@@ -9,8 +9,10 @@ export const ELEMENTOS_CADASTRO = {
     inputClick: 'input[class="natds185"]',
     inputNumeroCelular: 'input[name="homePhone"]',
     inputNumeroWhatsapp: 'input[name="whatsappPhone"]',
-    inputQueroReceberViaWhatsapp: '',
-    inputFornecerMinhasInformacoes: '',
-    inputConfirmarMaisDe18Anos: '',
-    inputCriarConta: ''
+    inputGenero: 'input[name="gender"]',
+    inputQueroReceberViaSMS: 'input[id="receiveNewsLetterSms"]',
+    inputQueroReceberViaWhatsapp: 'input[id="pushOptInWP"]',
+    inputFornecerMinhasInformacoes: 'input[id="infContOptIn"]',
+    inputConfirmarMaisDe18Anos: 'input[id="acceptedterms"]',
+    inputCriarConta: 'button[class*="MuiButtonBase-root MuiButton-root"]'
 };

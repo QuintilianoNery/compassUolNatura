@@ -3,12 +3,17 @@ import Login from '../../support/pages/home/login';
 import Cadastro from '../../support/pages/home/login/cadastrarSe';
 const url = require('../../fixtures/urls.json')
 var faker = require('faker-br');
-const Leite = require('leite');
+
 
 const nome = faker.name.firstName();
 const sobrenome = faker.name.lastName();
 const email = faker.internet.email(nome);
-const senha = faker.internet.password();
+
+const numeroSenha = faker.random.number(1000);
+const caracteresEspeciais = "!@#$%^&*()_+";
+const caracterEspecialAleatorio = faker.random.arrayElement(caracteresEspeciais)
+const senha = faker.internet.password() + numeroSenha + caracterEspecialAleatorio;
+
 const cpf = faker.br.cpf();
 const data = "01031995";
 const numero = faker.phone.phoneNumber();
@@ -52,7 +57,7 @@ describe('Cadastro de usuarios', () => {
             Cadastro.digitarNumeroWhatsapp(numeroWhatsapp);
             Cadastro.clicarFornecerMinhasInformacoes();
             Cadastro.clicarConfirmarMaisDe18Anos();
-            // Cadastro.clicarCriarConta();
+            Cadastro.clicarCriarConta();
 
         });
     });
