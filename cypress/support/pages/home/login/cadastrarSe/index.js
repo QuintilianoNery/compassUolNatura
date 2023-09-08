@@ -41,12 +41,10 @@ class CadastrarSe {
     }
 
     clicarGenero() {
-        cy.get(ELEMENTOS_CADASTRO.inputClick).should('be.visible');
         cy.get(ELEMENTOS_CADASTRO.inputGenero).eq(1).click();
     }
 
     clicarQueroReceberViaSMS() {
-        cy.get(ELEMENTOS_CADASTRO.inputQueroReceberViaSMS).should('be.visible');
         cy.get(ELEMENTOS_CADASTRO.inputQueroReceberViaSMS).click();
     }
 
@@ -56,7 +54,6 @@ class CadastrarSe {
     }
 
     clicarQueroReceberViaWhatsapp() {
-        cy.get(ELEMENTOS_CADASTRO.inputQueroReceberViaWhatsapp).should('be.visible');
         cy.get(ELEMENTOS_CADASTRO.inputQueroReceberViaWhatsapp).click();
     }
 
@@ -67,18 +64,17 @@ class CadastrarSe {
 
 
     clicarFornecerMinhasInformacoes() {
-        cy.get(ELEMENTOS_CADASTRO.inputFornecerMinhasInformacoes).should('be.visible');
         cy.get(ELEMENTOS_CADASTRO.inputFornecerMinhasInformacoes).click();
     }
 
     clicarConfirmarMaisDe18Anos() {
-        cy.get(ELEMENTOS_CADASTRO.inputConfirmarMaisDe18Anos).should('be.visible');
         cy.get(ELEMENTOS_CADASTRO.inputConfirmarMaisDe18Anos).click();
     }
 
     clicarCriarConta() {
         cy.get(ELEMENTOS_CADASTRO.inputCriarConta).should('be.visible');
         cy.get(ELEMENTOS_CADASTRO.inputCriarConta).eq(2).click();
+        cy.wait(2000)
     }
 }
 

@@ -4,6 +4,11 @@
   "description": "<h1 align=\"center\">compassUolNatura</h1>",
   "main": "index.js",
   "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "cy:reportAllure": "npx cypress run --config video=false --env allure=true --browser edge",
+    "cy:allureGenerete": "allure generate allure-results",
+    "cy:allureOpen": "allure open allure-report",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +24,7 @@
   "homepage": "https://github.com/QuintilianoNery/compassUolNatura#readme",
   "dependencies": {
     "@cypress/grep": "^4.0.0",
+    "@shelex/cypress-allure-plugin": "^2.40.0",
     "cypress": "^12.14.0",
     "cypress-plugin-steps": "^1.1.1",
     "faker-br": "^0.4.1",

@@ -14,5 +14,5 @@ export const ELEMENTOS_CADASTRO = {
     inputQueroReceberViaWhatsapp: 'input[id="pushOptInWP"]',
     inputFornecerMinhasInformacoes: 'input[id="infContOptIn"]',
     inputConfirmarMaisDe18Anos: 'input[id="acceptedterms"]',
-    inputCriarConta: 'button[class*="MuiButtonBase-root MuiButton-root"]'
+    inputCriarConta: 'button[class*="MuiButtonBase-root MuiButton-root"]',
 };

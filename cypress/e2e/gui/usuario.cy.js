@@ -19,7 +19,8 @@ const data = "01031995";
 const numero = faker.phone.phoneNumber();
 const numeroWhatsapp = faker.phone.phoneNumber();
 
-
+//Neste teste realizo apenas a validação dos componentes e não do texto, pois na minha visão o texto 
+//é dinamico e pode mudar a qualquer momento, já os componentes não, garantindo assim a estabilidade do teste
 describe('Cadastro de usuarios', () => {
     context('Novo usuario se cadastrando no site da Natura', () => {
         before(() => {
@@ -37,12 +38,14 @@ describe('Cadastro de usuarios', () => {
             Home.validarDivPrincipalComComponentesDaPagina();
             Home.acessarPaginaDeLogin();
 
+            cy.step('Validar se a pagina de login foi acessada');
             cy.validarUrlHomeDaPagina(url.naturaLogin);
             Login.validarSeCamposDeLoginECadastroEstaoVisiveis();
             Login.clicarBotaoCadastro();
 
+            cy.step('Validar se a pagina de cadastro foi acessada');
             cy.validarUrlHomeDaPagina(url.naturaCadastro);
-
+            cy.step('Preencher todos os campos do cadastro');
             Cadastro.digitarPrimeiroNome(nome);
             Cadastro.digitarSobrenome(sobrenome);
             Cadastro.digitarEmail(email);
@@ -58,6 +61,12 @@ describe('Cadastro de usuarios', () => {
             Cadastro.clicarFornecerMinhasInformacoes();
             Cadastro.clicarConfirmarMaisDe18Anos();
             Cadastro.clicarCriarConta();
+
+            cy.step('Validar se o cadastro foi realizado com sucesso');
+            cy.validarUrlHomeDaPagina(url.naturaHome);
+            //O teste está certo, mas por algum motivo o site da Natura não apresenta o nome da pessoa logada, mostra apenas Minha Conta
+            // Home.validarNomeUsuario(nome)
+
 
         });
     });

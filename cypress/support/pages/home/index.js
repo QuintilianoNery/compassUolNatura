@@ -22,6 +22,10 @@ class HomePage {
     acessarPaginaDeLogin() {
         cy.get(ELEMENTOS_HOME.minhaContaEntrar).click()
     }
+    validarNomeUsuario(nome) {
+        cy.wait(3000)
+        cy.get(ELEMENTOS_HOME.divNomeUsuario).should('contain.text', `Olá, ${nome}!`).screenshot()
+    }
 }
 
 export default new HomePage();
