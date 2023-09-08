@@ -3,12 +3,6 @@
 import { ELEMENTOS_HOME } from './elements';
 
 class HomePage {
-    validarUrlHomeDaPaginaNatura() {
-        // cy.get(ELEMENTOS_HOME.iconUser).click()
-        cy.visit('/');
-        cy.url().should('contain', 'natura.com.br');
-    }
-
     validarMenuPrincipal() {
         cy.get(ELEMENTOS_HOME.menuPrincipal).should('be.visible');
     }
@@ -23,6 +17,10 @@ class HomePage {
 
     validarDivPrincipalComComponentesDaPagina() {
         cy.get(ELEMENTOS_HOME.divPrincipalComponentesPagina).should('be.visible');
+    }
+
+    acessarPaginaDeLogin() {
+        cy.get(ELEMENTOS_HOME.minhaContaEntrar).click()
     }
 }
 
