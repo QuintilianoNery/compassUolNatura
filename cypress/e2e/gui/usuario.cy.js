@@ -24,7 +24,7 @@ const numeroWhatsapp = faker.phone.phoneNumber();
 describe('Cadastro de usuarios', () => {
     context('Novo usuario se cadastrando no site da Natura', () => {
         before(() => {
-            cy.visit('/');
+            cy.visit('https://www.natura.com.br/');
         });
         it('Cadastrar usuario com o preenchimento de todos os campos', () => {
 
