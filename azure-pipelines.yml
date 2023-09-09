@@ -1,8 +1,3 @@
-# Node.js
-# Build a general Node.js project with npm.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
 - master
 
@@ -19,13 +14,19 @@ steps:
     npm init -y
   displayName: 'npm init -y'
 
-- script:    
-    npm install --yes
-  displayName: 'npm install --yes'
+  - script: npm install --yes
+    displayName: "npm install --yes"
 
-- script: 
-    npm install cypress@12.17.4 -d
-  displayName: 'Install Cypress'
+  - script: npm install cypress@12.17.4 -d
+    displayName: "Install Cypress"
 
-- script: npx cypress run --config video=true
-  displayName: 'Execute Cypress'
+  - script: npx cypress run --config video=true
+    displayName: "Execute Cypress"
+
+  - task: PublishTestResults@1
+    displayName: "Publish Test Results"
+    condition: succeededOrFailed()
+    inputs:
+      targetPath: "**/cypress/videos/*.mp4"
+      artifactName: "Cypress Videos"
+      publishlocation: "pipeline"
