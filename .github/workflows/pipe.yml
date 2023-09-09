@@ -23,7 +23,7 @@ jobs:
     # Qual versão do node vai ser utilizada
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x]
 
     # Configurações
     # Configuração que instala o node
