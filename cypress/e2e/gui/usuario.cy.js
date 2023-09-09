@@ -23,10 +23,8 @@ const numeroWhatsapp = faker.phone.phoneNumber();
 //é dinamico e pode mudar a qualquer momento, já os componentes não, garantindo assim a estabilidade do teste
 describe('Cadastro de usuarios', () => {
     context('Novo usuario se cadastrando no site da Natura', () => {
-        before(() => {
-            cy.visit('/');
-        });
         it('Cadastrar usuario com o preenchimento de todos os campos', () => {
+            cy.visit('/');
 
             // cy.section('Cadastro de usuario')
             // cy.step('Acesso ao home do site da Natura');
