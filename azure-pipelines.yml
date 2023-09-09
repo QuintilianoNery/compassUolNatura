@@ -1,20 +1,20 @@
 trigger:
-- master
+  - master
 
 pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "10.x"
+    displayName: "Install Node.js"
 
-- script: |
-    npm init -y
-    npm install --yes
-    npm install cypress@12.17.4 -d
-  displayName: 'Instalar dependências'
+  - script: |
+      npm init -y
+      npm install --yes
+      npm install cypress@12.17.4 -d
+    displayName: "Instalar dependências"
 
   - script: npx cypress run --config video=true
     displayName: "Execute Cypress"
@@ -26,4 +26,3 @@ steps:
       targetPath: "**/cypress/videos/*.mp4"
       artifactName: "Cypress Videos"
       publishlocation: "pipeline"
-
