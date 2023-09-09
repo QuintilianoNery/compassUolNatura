@@ -23,6 +23,6 @@ steps:
     displayName: "Publish Test Results"
     condition: succeededOrFailed()
     inputs:
-      targetPath: "**/cypress/videos/*.mp4"
+      targetPath: "**/cypress/videos"
       artifactName: "Cypress Videos"
       publishlocation: "pipeline"
