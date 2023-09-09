@@ -25,6 +25,7 @@ describe('Cadastro de usuarios', () => {
     context('Novo usuario se cadastrando no site da Natura', () => {
         before(() => {
             cy.visit('https://www.natura.com.br/');
+            cy.wait(2000);
         });
         it('Cadastrar usuario com o preenchimento de todos os campos', () => {
 
