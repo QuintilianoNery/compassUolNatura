@@ -28,24 +28,24 @@ describe('Cadastro de usuarios', () => {
         });
         it('Cadastrar usuario com o preenchimento de todos os campos', () => {
 
-            cy.section('Cadastro de usuario')
-            cy.step('Acesso ao home do site da Natura');
+            // cy.section('Cadastro de usuario')
+            // cy.step('Acesso ao home do site da Natura');
             cy.validarUrlHomeDaPagina(url.naturaHome);
-            cy.step('Validar elementos importantes da página estão visiveis');
+            // cy.step('Validar elementos importantes da página estão visiveis');
             Home.validarMenuPrincipal();
             Home.validarBarraDeFerramentas();
             Home.validarMenuCategorias();
             Home.validarDivPrincipalComComponentesDaPagina();
             Home.acessarPaginaDeLogin();
 
-            cy.step('Validar se a pagina de login foi acessada');
+            // cy.step('Validar se a pagina de login foi acessada');
             cy.validarUrlHomeDaPagina(url.naturaLogin);
             Login.validarSeCamposDeLoginECadastroEstaoVisiveis();
             Login.clicarBotaoCadastro();
 
-            cy.step('Validar se a pagina de cadastro foi acessada');
+            // cy.step('Validar se a pagina de cadastro foi acessada');
             cy.validarUrlHomeDaPagina(url.naturaCadastro);
-            cy.step('Preencher todos os campos do cadastro');
+            // cy.step('Preencher todos os campos do cadastro');
             Cadastro.digitarPrimeiroNome(nome);
             Cadastro.digitarSobrenome(sobrenome);
             Cadastro.digitarEmail(email);
@@ -62,7 +62,7 @@ describe('Cadastro de usuarios', () => {
             Cadastro.clicarConfirmarMaisDe18Anos();
             Cadastro.clicarCriarConta();
 
-            cy.step('Validar se o cadastro foi realizado com sucesso');
+            // cy.step('Validar se o cadastro foi realizado com sucesso');
             cy.validarUrlHomeDaPagina(url.naturaHome);
             //O teste está certo, mas por algum motivo o site da Natura não apresenta o nome da pessoa logada, mostra apenas Minha Conta
             // Home.validarNomeUsuario(nome)

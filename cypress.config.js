@@ -1,5 +1,7 @@
 const { defineConfig } = require("cypress");
-// const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+
 
 module.exports = defineConfig({
   projectId: 'da4krc',
@@ -11,8 +13,8 @@ module.exports = defineConfig({
 
   e2e: {
     setupNodeEvents(on, config) {
-      // allureWriter(on, config)
-      require('@cypress/grep/src/plugin')(config);
+      // require('@cypress/grep/src/plugin')(config);
+      allureWriter(on, config);
       return config;
     },
     baseUrl: 'https://www.natura.com.br/',

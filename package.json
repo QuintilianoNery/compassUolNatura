@@ -6,6 +6,10 @@
   "scripts": {
     "cy:open": "npx cypress open",
     "cy:run": "npx cypress run",
+    "cy:dashCypressClound": "npx cypress run --record --key fb63c5ef-99a6-4271-97c5-ff72917fac41",
+    "cy:reportAllure": "npx cypress run --config video=false --env allure=true",
+    "cy:allureGenerete": "allure generate allure-results",
+    "cy:allureOpen": "allure open allure-report",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
