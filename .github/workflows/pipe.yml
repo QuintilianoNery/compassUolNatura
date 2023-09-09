@@ -36,7 +36,7 @@ jobs:
       #comandos necessários para executar a aplicação da mesma forma que no PC
       - run: npm install
 
-      - run: npx cypress run --config video=false --env allure=true --browser chrome
+      - run: npx cypress run --config video=false --env allure=true
 
         #Geração do relatório em HTML allure-report
       - name: Allure report V2
