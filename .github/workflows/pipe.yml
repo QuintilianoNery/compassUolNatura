@@ -23,16 +23,18 @@ jobs:
     # Qual versão do node vai ser utilizada
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [14.x, 16.x, 18.x]
 
     # Configurações
     # Configuração que instala o node
     steps:
-      - name: Setup Node.js
-        uses: actions/setup-node@v2.1.2
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: actions/checkout@v2
+          cache: "npm"
+
       #comandos necessários para executar a aplicação da mesma forma que no PC
       - run: npm init -y
       - run: npm install --yes
