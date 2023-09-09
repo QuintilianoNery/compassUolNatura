@@ -12,13 +12,9 @@ steps:
 
 - script: |
     npm init -y
-  displayName: 'npm init -y'
-
-  - script: npm install --yes
-    displayName: "npm install --yes"
-
-  - script: npm install cypress@12.17.4 -d
-    displayName: "Install Cypress"
+    npm install --yes
+    npm install cypress@12.17.4 -d
+  displayName: 'Instalar dependências'
 
   - script: npx cypress run --config video=true
     displayName: "Execute Cypress"
@@ -30,4 +26,4 @@ steps:
       targetPath: "**/cypress/videos/*.mp4"
       artifactName: "Cypress Videos"
       publishlocation: "pipeline"
-      
+
