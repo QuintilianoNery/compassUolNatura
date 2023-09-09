@@ -30,3 +30,4 @@ steps:
       targetPath: "**/cypress/videos/*.mp4"
       artifactName: "Cypress Videos"
       publishlocation: "pipeline"
+      
