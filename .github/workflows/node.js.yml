@@ -39,7 +39,6 @@ jobs:
       - run: npm install --yes
       - run: install cypress@12.17.4 -d
 
-      - run: npx cypress run --config video=false --env allure=true --record --key ad7e7e2c-7f7c-48f1-8f1c-8c8098294edc
       - run: npx cypress run --config video=false --env allure=true --record --key fb63c5ef-99a6-4271-97c5-ff72917fac41
       # - run: node runner.js
       #Geração do relatório em HTML allure-report
