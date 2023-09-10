@@ -17,5 +17,5 @@ steps:
     displayName: "Instalar dependências"
 
   - script: |
-      npx cypress run --config video=true --browser chrome --record --key fb63c5ef-99a6-4271-97c5-ff72917fac41
+      npx cypress run --record --key fb63c5ef-99a6-4271-97c5-ff72917fac41
     displayName: "Cypress"
