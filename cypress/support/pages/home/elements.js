@@ -4,5 +4,5 @@ export const ELEMENTOS_HOME = {
     menuCategorias: 'div[class="natds65 natds70 jss1"]',
     divPrincipalComponentesPagina: 'div[class="natds2"]',
     minhaContaEntrar: 'div[class="MuiBox-root natds47 natds45 natds46"]',
-    divNomeUsuario: 'div[class="MuiBox-root natds1332"] [class*="MuiTypography-root"]'
+    divNomeUsuario: 'h6[class="MuiTypography-root MuiTypography-subtitle2"]'
 };

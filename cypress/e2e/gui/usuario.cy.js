@@ -8,12 +8,10 @@ var faker = require('faker-br');
 const nome = faker.name.firstName();
 const sobrenome = faker.name.lastName();
 const email = faker.internet.email(nome);
-
 const numeroSenha = faker.random.number(1000);
 const caracteresEspeciais = "!@#$%^&*()_+";
 const caracterEspecialAleatorio = faker.random.arrayElement(caracteresEspeciais)
 const senha = faker.internet.password() + numeroSenha + caracterEspecialAleatorio;
-
 const cpf = faker.br.cpf();
 const data = "01031995";
 const numero = faker.phone.phoneNumber();
@@ -67,7 +65,7 @@ describe('Cadastro de usuarios', () => {
             cy.validarUrlHomeDaPagina(url.naturaHome);
             //O teste está certo, mas por algum motivo o site da Natura não apresenta o nome da pessoa logada, mostra apenas Minha Conta.
             //Isso apenas executando pelo Cypress, já pelo site da Natura o nome aparece normalmente.
-            // Home.validarNomeUsuario(nome)
+            Home.validarNomeUsuario(nome)
 
 
         });
